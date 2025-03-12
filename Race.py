@@ -50,7 +50,7 @@ def main():
 
     race_over = False
     while not race_over:
-        win.clear_win()
+        win.delete("all")
 
         # Move the images
         horse1.move()
