@@ -1,3 +1,5 @@
+# COMP 1020 Assignment 2 / Yoonha Park
+
 from Dice import *
 from graphics import *
 
@@ -34,8 +36,8 @@ def main():
     win.setBackground(color_rgb(0, 250, 250))
 
     # Set the images' positions
-    horse1_image = Image(Point(100, 100), "https://github.com/yulia2432/A2/raw/4e06a791633154b8ffab57baa919684cb1989ce0/Horse1.gif")
-    horse2_image = Image(Point(100, 250), "https://github.com/yulia2432/A2/raw/4e06a791633154b8ffab57baa919684cb1989ce0/Horse2.gif")
+    horse1_image = Image(Point(100, 100), "Horse1.gif")
+    horse2_image = Image(Point(100, 250), "Horse2.gif")
 
     # Set the speed and position of the images
     horse1 = Horse(6, 100, horse1_image, win)
