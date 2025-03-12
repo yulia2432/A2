@@ -1,5 +1,3 @@
-# COMP 1020 Assignment 2 / Yoonha Park
-
 from Dice import *
 from graphics import *
 
@@ -31,7 +29,7 @@ class Horse:
 
 
 def main():
-   # Make the background
+    # Make the background
     win = GraphWin("Race field", 700, 350, autoflush=False)
     win.setBackground(color_rgb(0, 250, 250))
 
@@ -48,12 +46,11 @@ def main():
     finish_line.draw(win)
     win.getMouse()
 
-
     race_over = False
     while not race_over:
         win.clear_win()
 
-       # Move the images
+        # Move the images
         horse1.move()
         horse2.move()
         horse1.draw()
@@ -61,7 +58,7 @@ def main():
         finish_line.draw(win)
         update(10)
 
-       # Print which one is winner
+        # Print which one is the winner
         if horse1.crossed_finish_line(650) and horse2.crossed_finish_line(650):
             race_over = True
             print("Tie")
