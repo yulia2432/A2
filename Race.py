@@ -36,6 +36,9 @@ def main():
     win.setBackground(color_rgb(0, 250, 250))
 
     # Set the images' positions
+    horse1_image = "Horse1.gif"
+    horse2_image = "Horse2.gif"
+
     horse1_image = Image(Point(100,100), "Horse1.gif")
     horse2_image = Image(Point(100, 250), "Horse2.gif")
 
