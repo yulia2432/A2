@@ -9,7 +9,7 @@ class Horse:
         self.x_pos = 0
         self.dice = Dice(speed)
         self.y_pos = y_pos
-        self.image = Image(Point(self.x_pos+25, self.y_pos), image)
+        self.image = graphics.Image(Point(self.x_pos+25, self.y_pos), image)
         self.window = window
         self.image.draw(self.window)
 
