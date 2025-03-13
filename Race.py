@@ -35,8 +35,8 @@ def main():
     win.setBackground(color_rgb(0, 250, 250))
 
     # Set the images' positions
-    horse1_image = "Knight.gif"
-    horse2_image = "Witch.gif"
+    horse1_image = "Knight.png"
+    horse2_image = "Witch.png"
 
     # Set the speed and position of the images
     horse1 = Horse(6, 100, horse1_image, win)
