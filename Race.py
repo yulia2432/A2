@@ -6,12 +6,11 @@ from graphics import *
 # Make the class for horse
 class Horse:
     def __init__(self, speed, y_pos, image, window):
-        self.speed = speed
+        self.x_pos = 0
         self.dice = Dice(speed)
-        self.x_pos = 100
         self.y_pos = y_pos
-        self.image = image
         self.window = window
+        self.image = Image(Point(self.x_pos+25, self.y_pos), image)
         self.image.draw(self.window)
 
     # Make the function to roll the dice and make the images move
@@ -19,10 +18,10 @@ class Horse:
         roll = self.dice.roll()
         self.x_pos += roll
         self.image.move(roll, 0)
+        update()
 
     # Set the position
     def draw(self):
-        self.image.undraw()
         self.image.draw(self.window)
        
     # Check if crossed the finish line
@@ -36,8 +35,8 @@ def main():
     win.setBackground(color_rgb(0, 250, 250))
 
     # Set the images' positions
-    horse1_image = Image(Point(100, 100), "Horse1.gif")
-    horse2_image = Image(Point(100, 250), "Horse2.gif")
+    horse1_image = "Horse1.gif"
+    horse2_image = "Horse2.gif"
 
     # Set the speed and position of the images
     horse1 = Horse(6, 100, horse1_image, win)
@@ -49,16 +48,12 @@ def main():
     win.getMouse()
 
     race_over = False
+
     while not race_over:
-        win.clear_win()
 
         # Move the images
         horse1.move()
         horse2.move()
-        horse1.draw()
-        horse2.draw()
-        finish_line.draw(win)
-        update(10)
 
         # Print which one is the winner
         if horse1.crossed_finish_line(650) and horse2.crossed_finish_line(650):
