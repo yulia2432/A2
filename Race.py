@@ -9,8 +9,8 @@ class Horse:
         self.x_pos = 0
         self.dice = Dice(speed)
         self.y_pos = y_pos
-        self.window = window
         self.image = Image(Point(self.x_pos+25, self.y_pos), image)
+        self.window = window
         self.image.draw(self.window)
 
     # Make the function to roll the dice and make the images move
@@ -31,7 +31,7 @@ class Horse:
 
 def main():
     # Make the background
-    win = GraphWin("Race field", 700, 350, autoflush=False)
+    win = GraphWin("Race field", 700, 350)
     win.setBackground(color_rgb(0, 250, 250))
 
     # Set the images' positions
