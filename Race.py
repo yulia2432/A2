@@ -1,7 +1,7 @@
 # COMP 1020 Assignment 2 / Yoonha Park u1527485
 
 from Dice import *
-from graphics import *
+from graphics import GraphWin, Line, Point, Image, color_rgb
 
 # Make the class for horse
 class Horse:
@@ -9,7 +9,7 @@ class Horse:
         self.x_pos = 0
         self.dice = Dice(speed)
         self.y_pos = y_pos
-        self.image = graphics.Image(Point(self.x_pos+25, self.y_pos), image)
+        self.image = Image(Point(self.x_pos+25, self.y_pos), image)
         self.window = window
         self.image.draw(self.window)
 
@@ -18,7 +18,6 @@ class Horse:
         roll = self.dice.roll()
         self.x_pos += roll
         self.image.move(roll, 0)
-        update()
 
     # Set the position
     def draw(self):
