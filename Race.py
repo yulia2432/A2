@@ -1,7 +1,7 @@
 # COMP 1020 Assignment 2 / Yoonha Park u1527485
 
 from Dice import *
-from graphics import *
+from Graphics import *
 
 # Make the class for horse
 class Horse:
