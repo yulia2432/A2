@@ -1,4 +1,4 @@
-# COMP 1020 Assignment 2 / Yoonha Park
+# COMP 1020 Assignment 2 / Yoonha Park u1527485
 
 from Dice import *
 from graphics import *
@@ -50,7 +50,7 @@ def main():
 
     race_over = False
     while not race_over:
-        win.delete("all")
+        win.clear_win()
 
         # Move the images
         horse1.move()
